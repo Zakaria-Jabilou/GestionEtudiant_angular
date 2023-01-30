@@ -1,0 +1,37 @@
+<div class="container mt-2">
+
+  <div class="card">
+    <div *ngIf="erreurMessage">
+      {{erreurMessage | json}}
+    </div>
+    <div class="card-header">Clients</div>
+    <div class="card-body">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of student">
+          <td>{{c.id}}</td>
+          <td>{{c.nom}}</td>
+          <td>{{c.cne}}</td>
+          <td><button type="button" routerLink="/absence" class="btn btn-primary">Absence</button></td>
+
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+</div>
